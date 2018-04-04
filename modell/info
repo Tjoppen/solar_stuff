@@ -1,0 +1,22 @@
+Direct Normal Irradiance (DNI) is the amount of solar radiation received per unit area by a surface that is always held perpendicular (or normal) to the rays that come in a straight line from the direction of the sun at its current position in the sky
+Diffuse Horizontal Irradiance is the amount of radiation received per unit area by a surface that does not arrive on a direct path from the sun, but has been scattered by molecules and particles in the atmosphere
+DHI också intressant.. Slipper beräkna shit med vinklar
+
+https://en.wikipedia.org/wiki/Irradiance
+The global irradiance on a horizontal surface on Earth consists of the direct irradiance Ee,dir and diffuse irradiance Ee,diff
+
+Koordinater: 64.32834/20.56327
+
+http://strang.smhi.se/extraction/getseries.php?par=117&m1=1&d1=1&y1=2017&h1=0&m2=12&d2=31&y2=2017&h2=23&lat=64.32834&lon=20.56327&lev=0  Global irradiance
+http://strang.smhi.se/extraction/getseries.php?par=118&m1=1&d1=1&y1=2017&h1=0&m2=12&d2=31&y2=2017&h2=23&lat=64.32834&lon=20.56327&lev=0  Direct normal irradiance
+http://strang.smhi.se/extraction/getseries.php?par=121&m1=1&d1=1&y1=2017&h1=0&m2=12&d2=31&y2=2017&h2=23&lat=64.32834&lon=20.56327&lev=0  Direct horizontal irradiance
+http://strang.smhi.se/extraction/getseries.php?par=122&m1=1&d1=1&y1=2017&h1=0&m2=12&d2=31&y2=2017&h2=23&lat=64.32834&lon=20.56327&lev=0  Diffuse irradiance
+
+Följande dataserier tycks bugga (får -999):
+
+Diffuse irradiance
+Direct horizontal irradiance
+
+Global Horizontal Irradiance inkluderar DNI och DHI. Gissningsvis fås DNI*sin(elevation) ur GHI - DHI
+SMHI har Direct Horizontal irradiance
+
