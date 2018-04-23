@@ -1,6 +1,7 @@
 %
-year = argv(){end}
-y2 = year - 2000
+%year = argv(){end}
+year = "2017"
+%y2 = year - 2000
 
 % leap years: 2000, 2004, 2008, ...
 % for the given year we must add the extra days in the leap years before it:
@@ -15,7 +16,7 @@ y2 = year - 2000
 % 2007: 2
 % 2008: 2
 
-n0 = y2 * 365 + ceil(y2 / 4)
+%n0 = y2 * 365 + ceil(y2 / 4)
 
 
 _global = dlmread(sprintf('%s-global.ssv', year), ' ');
@@ -27,4 +28,20 @@ days = size(_global,1)/24
 % hour angle
 h = mod(0:(size(_global,1)-1),24);
 axial_tilt = 23.5
+
+years = 1:30;
+eff_max = 97.5;
+eff_y12 = 91.2;
+eff_y30 = 80.6;
+eff_slope = (91.2-80.6)/(30-12); % efficiency drop per year
+panel_eff = 0.169 * min(eff_max, eff_y30 + eff_slope*(max(years)-years)) / 100;
+
+% http://solarpaneltilt.com/
+tilt_eff = 0.75;
+A_panel = 1.6;       % panel area in m²
+kWh_per_panel_per_year = panel_eff * tilt_eff * A_panel * 365/days * (sum(directn(:,5) + max(0,diffuse(:,5)))) / 1000
+production_per_panel_30_years = sum(kWh_per_panel_per_year)
+
+ten_panels_power_year1 = kWh_per_panel_per_year(1)*10
+fourty_panels_power_year1 = kWh_per_panel_per_year(1)*40
 
