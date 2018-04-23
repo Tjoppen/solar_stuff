@@ -5,6 +5,12 @@ Most of this is in Swedish.
 ## FreeCAD drawings
 
 Made using FreeCAD 0.16.
+Relevant blag posts:
+
+* [Trying out FreeCAD](http://härdin.se/blog/2018/01/28/trying-out-freecad/)
+* [FreeCAD follow-up](http://härdin.se/blog/2018/02/08/freecad-follow-up/)
+* [Triangular solar panel mount](http://härdin.se/blog/2018/03/10/triangular-solar-panel-mount/)
+* [Triangular solar panel mount version 2](http://härdin.se/blog/2018/03/17/triangular-solar-panel-mount-version-2/)
 
 ## Insolation model
 
